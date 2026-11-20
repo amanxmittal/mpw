@@ -1,0 +1,7 @@
+# Netlify Configuration for Mittal Plastic Works
+
+[build]
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
