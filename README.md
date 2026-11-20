@@ -25,3 +25,4 @@ Official website for **Mittal Plastic Works** — a precision plastic injection 
 2. `about-us.html` - Enterprise history, founder story (Mr. Vineet Kumar), four manufacturing pillars, and facility capacity.
 3. `products.html` - Complete technical product catalog with category filter pills, dimensional specifications, comparison table, and custom tooling workflow.
 4. `contacts.html` - Direct contact details, operational hours, Netlify RFQ quotation form, and Google Maps location embed.
+5. `404.html` - Branded error recovery page with quick product routing, dark/light theme support, and direct WhatsApp contact.
