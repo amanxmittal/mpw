@@ -5,607 +5,784 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="Mittal Plastic Works is an established plastic injection moulding manufacturer in Meerut, UP. Specializing in precision plastic cores, jallis, sports goods components, and custom moulds.">
+  <meta name="description" content="Mittal Plastic Works is an established plastic injection moulding manufacturer in Meerut, UP. Specializing in precision plastic cores, jallis, sports goods packaging, and custom tooling.">
   <link href="assets/images/favicon/mpwfavicon.png" rel="icon">
   <title>Mittal Plastic Works | Precision Plastic Injection Moulding Manufacturer</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700%7cRoboto:400,500,700&amp;display=swap">
-  <link rel="stylesheet" href="assets/css/libraries.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Inline Theme Script to Prevent Theme Flash (FOUC) -->
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('mpw-theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Modern Design System Stylesheet -->
+  <link rel="stylesheet" href="assets/css/modern.css" />
 </head>
 
 <body>
-  <div class="wrapper">
-    <!-- =========================
-        Header 
-    =========================== -->
-    <header class="header header-transparent">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo/logo-light.svg" class="logo-light" alt="Mittal Plastic Works">
-            <img src="assets/images/logo/logo-dark.svg" class="logo-dark" alt="Mittal Plastic Works">
-          </a>
-          <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-            <span class="menu-lines"><span></span></span>
-          </button>
-          <div class="collapse navbar-collapse" id="mainNavigation">
-            <ul class="navbar-nav mr-auto ml-auto">
-              <li class="nav__item">
-                <a href="index.html" class="nav__item-link active">Home</a>
-              </li>
-              <li class="nav__item">
-                <a href="about-us.html" class="nav__item-link">About Us</a>
-              </li>
-              <li class="nav__item">
-                <a href="products.html" class="nav__item-link">Our Products</a>
-              </li>
-              <li class="nav__item">
-                <a href="contacts.html" class="nav__item-link">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="navbar-actions">
-            <ul class="navbar__actions-list list-unstyled mb-0 d-flex align-items-center">
-              <li><a href="contacts.html" class="action__btn btn btn__white action__btn-contact">Get a Quote</a></li>
-              <li><a href="#" class="action__btn action__btn-humburgerMenu" aria-label="Menu"><i class="icon-menu"></i></a></li>
-            </ul>
-          </div>
-        </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Mittal Plastic Works Home">
+        <img src="assets/images/logo/logo-dark.svg" alt="Mittal Plastic Works Logo" class="logo-for-light">
+        <img src="assets/images/logo/logo-light.svg" alt="Mittal Plastic Works Logo" class="logo-for-dark">
+        <span class="brand-badge">Meerut, UP</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about-us.html" class="nav-link">About Us</a>
+        <a href="products.html" class="nav-link">Our Products</a>
+        <a href="contacts.html" class="nav-link">Contact & RFQ</a>
       </nav>
-    </header>
 
-    <!-- ============================
-        Slider
-    ============================== -->
-    <section class="slider slider-centerd">
-      <div class="carousel owl-carousel carousel-arrows carousel-dots carousel-dots-light" data-slide="1"
-        data-slide-md="1" data-slide-sm="1" data-autoplay="true" data-nav="true" data-dots="true" data-space="0"
-        data-loop="true" data-speed="3000" data-transition="fade" data-animate-out="fadeOut" data-animate-in="fadeIn">
-        
-        <!-- Slide 1 -->
-        <div class="slide-item bg-overlay">
-          <div class="bg-img"><img src="assets/images/backgrounds/im.jpg" alt="Mittal Plastic Works Manufacturing"></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1">
-                <div class="slide__content">
-                  <span class="slide__subtitle">Precision Plastic Injection Moulding</span>
-                  <h2 class="slide__title">Precision Cores, Jallis & Custom Moulded Components</h2>
-                  <p class="slide__desc">Over 20 years of manufacturing excellence in Meerut, delivering high-durability plastic injection moulded solutions across India.</p>
-                  <a href="products.html" class="btn btn__white mx-2">Explore Products</a>
-                  <a href="contacts.html" class="btn btn__primary mx-2">Request a Quote</a>
-                </div>
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="tel:+919837075324" class="btn btn-outline btn-sm" aria-label="Call Mittal Plastic Works">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91-9837075324</span>
+        </a>
+        <a href="contacts.html" class="btn btn-primary btn-sm">Get a Quote</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="eyebrow">
+          <span class="eyebrow-badge">Precision Injection Moulding • Meerut, India</span>
+        </div>
+        <h1>High-Tolerance Plastic Cores, Jallis & Custom Mouldings</h1>
+        <p>Over two decades of precision manufacturing expertise. Serving sports goods leaders, packaging converters, and industrial brands across India with high-durability polymer components.</p>
+        <div class="hero-actions">
+          <a href="products.html" class="btn btn-primary btn-lg">
+            <span>Explore Product Catalog</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20would%20like%20to%20request%20pricing%20and%20specifications." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+            <span>WhatsApp RFQ</span>
+          </a>
+        </div>
+        <div class="hero-trust-row">
+          <div class="trust-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>20+ Yrs In-House Moulding</span>
+          </div>
+          <div class="trust-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Virgin Grade Polymers</span>
+          </div>
+          <div class="trust-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Pan-India B2B Dispatch</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card-stack">
+          <div class="hero-img-wrap">
+            <img src="assets/images/backgrounds/im.jpg" alt="Plastic Injection Moulding Plant">
+          </div>
+          <div class="hero-floating-chip">
+            <div class="floating-chip-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <div class="floating-chip-text">
+              <h5>Direct Factory Supply</h5>
+              <span>Sabun Godam, Meerut Facility</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Strip -->
+  <section class="stats-strip">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">20<span class="highlight">+</span></div>
+        <div class="stat-label">Years of Manufacturing</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100<span class="highlight">+</span></div>
+        <div class="stat-label">B2B Supply Partners</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">10<span class="highlight">M+</span></div>
+        <div class="stat-label">Components Delivered</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100<span class="highlight">%</span></div>
+        <div class="stat-label">Quality Batch Inspection</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Product Catalog Section -->
+  <section class="section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Our Product Lineup</span>
+        <h2>Precision Engineered Plastic Components</h2>
+        <p>Built with structural rigidity, high impact resistance, and exact tolerances for sports equipment, packaging cores, and custom industrial applications.</p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-pills-wrap">
+        <button class="filter-btn active" data-filter="all">All Products</button>
+        <button class="filter-btn" data-filter="cores">Plastic Cores</button>
+        <button class="filter-btn" data-filter="assemblies">Core + Jalli Assemblies</button>
+        <button class="filter-btn" data-filter="components">Components & Jallis</button>
+        <button class="filter-btn" data-filter="custom">Custom Tooling</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid">
+
+        <!-- Product 1 -->
+        <div class="modern-product-card" data-category="cores">
+          <span class="card-badge">Popular Core</span>
+          <div class="card-img-box">
+            <img src="assets/images/products/1.png" alt="45mm Plastic Core">
+          </div>
+          <div class="card-body">
+            <div class="card-category">Plastic Cores</div>
+            <h3 class="card-title">45mm Plastic Core</h3>
+            <p class="card-desc">Standard 45mm diameter injection moulded core. Engineered for high rigidity and dimensional accuracy in sports goods and packaging tubes.</p>
+            <div class="card-specs-list">
+              <div class="spec-item">
+                <span class="spec-label">Diameter</span>
+                <span class="spec-val">Ø 45 mm</span>
               </div>
+              <div class="spec-item">
+                <span class="spec-label">Material</span>
+                <span class="spec-val">Virgin PP / HDPE</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Finish</span>
+                <span class="spec-val">Smooth Molded</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Supply</span>
+                <span class="spec-val">Bulk Orders</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%2045mm%20Plastic%20Core." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                <span>WhatsApp Quote</span>
+              </a>
+              <a href="contacts.html" class="btn btn-outline">RFQ</a>
             </div>
           </div>
         </div>
 
-        <!-- Slide 2 -->
-        <div class="slide-item bg-overlay">
-          <div class="bg-img"><img src="assets/images/backgrounds/Injection-Moulding.jpg" alt="Plastic Injection Moulding Plant"></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-10 offset-lg-1">
-                <div class="slide__content">
-                  <span class="slide__subtitle">Industrial & Sports Goods Specialists</span>
-                  <h2 class="slide__title">Engineered for Reliability, Toughness & Exact Tolerances</h2>
-                  <p class="slide__desc">Equipped with state-of-the-art injection moulding machinery engineered for high volume production, consistent quality, and prompt pan-India dispatch.</p>
-                  <a href="products.html" class="btn btn__white mx-2">View Catalog</a>
-                  <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20would%20like%20to%20inquire%20about%20your%20products." target="_blank" rel="noopener noreferrer" class="btn btn__primary mx-2">
-                    <i class="fa fa-whatsapp mr-1"></i> WhatsApp Inquiry
-                  </a>
-                </div>
+        <!-- Product 2 -->
+        <div class="modern-product-card" data-category="assemblies">
+          <span class="card-badge">Assembly</span>
+          <div class="card-img-box">
+            <img src="assets/images/products/3.png" alt="45mm Core with Jalli Assembly">
+          </div>
+          <div class="card-body">
+            <div class="card-category">Core + Jalli Assemblies</div>
+            <h3 class="card-title">45mm Core + Jalli</h3>
+            <p class="card-desc">Integrated 45mm core pre-assembled with durable protective plastic jalli grid. Essential for sports equipment and protective core packaging.</p>
+            <div class="card-specs-list">
+              <div class="spec-item">
+                <span class="spec-label">Diameter</span>
+                <span class="spec-val">Ø 45 mm</span>
               </div>
+              <div class="spec-item">
+                <span class="spec-label">Type</span>
+                <span class="spec-val">Core + Mesh</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Tolerance</span>
+                <span class="spec-val">± 0.05 mm</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Use</span>
+                <span class="spec-val">Sports Packaging</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%2045mm%20Core%20+%20Jalli." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                <span>WhatsApp Quote</span>
+              </a>
+              <a href="contacts.html" class="btn btn-outline">RFQ</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="modern-product-card" data-category="cores">
+          <span class="card-badge">Slim Core</span>
+          <div class="card-img-box">
+            <img src="assets/images/products/2.png" alt="6mm Plastic Core">
+          </div>
+          <div class="card-body">
+            <div class="card-category">Plastic Cores</div>
+            <h3 class="card-title">6mm Plastic Core</h3>
+            <p class="card-desc">Precision slim core with high dimensional stability. Clean flash-free edges and consistent internal bore diameter for precise mechanical fit.</p>
+            <div class="card-specs-list">
+              <div class="spec-item">
+                <span class="spec-label">Diameter</span>
+                <span class="spec-val">Ø 6 mm</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Material</span>
+                <span class="spec-val">Engineering PP</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Tolerance</span>
+                <span class="spec-val">High Precision</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Color</span>
+                <span class="spec-val">Custom / Black</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%206mm%20Plastic%20Core." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                <span>WhatsApp Quote</span>
+              </a>
+              <a href="contacts.html" class="btn btn-outline">RFQ</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="modern-product-card" data-category="assemblies">
+          <span class="card-badge">Heavy Duty</span>
+          <div class="card-img-box">
+            <img src="assets/images/products/6.png" alt="65mm Core with Jalli">
+          </div>
+          <div class="card-body">
+            <div class="card-category">Core + Jalli Assemblies</div>
+            <h3 class="card-title">65mm Core + Jalli</h3>
+            <p class="card-desc">Reinforced large diameter core for heavy sports equipment packaging and high-load industrial tubular packaging requirements.</p>
+            <div class="card-specs-list">
+              <div class="spec-item">
+                <span class="spec-label">Diameter</span>
+                <span class="spec-val">Ø 65 mm</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Profile</span>
+                <span class="spec-val">Heavy Gauge</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Material</span>
+                <span class="spec-val">Impact Grade PP</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Supply</span>
+                <span class="spec-val">Pan India</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%2065mm%20Core%20+%20Jalli." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                <span>WhatsApp Quote</span>
+              </a>
+              <a href="contacts.html" class="btn btn-outline">RFQ</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="modern-product-card" data-category="components">
+          <span class="card-badge">Component</span>
+          <div class="card-img-box">
+            <img src="assets/images/products/7.png" alt="Plastic Jalli Component">
+          </div>
+          <div class="card-body">
+            <div class="card-category">Components & Jallis</div>
+            <h3 class="card-title">Plastic Jalli (Mesh)</h3>
+            <p class="card-desc">Specialized protective jalli framework providing ventilation, rigidity, and impact absorption. Interlocks cleanly with plastic cores.</p>
+            <div class="card-specs-list">
+              <div class="spec-item">
+                <span class="spec-label">Structure</span>
+                <span class="spec-val">Lattice Mesh</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Material</span>
+                <span class="spec-val">Resilient Polymer</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Application</span>
+                <span class="spec-val">Core Grid / Filter</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Supply</span>
+                <span class="spec-val">Wholesale Ready</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20Plastic%20Jalli%20components." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                <span>WhatsApp Quote</span>
+              </a>
+              <a href="contacts.html" class="btn btn-outline">RFQ</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="modern-product-card" data-category="custom">
+          <span class="card-badge">Custom</span>
+          <div class="card-img-box">
+            <img src="assets/images/backgrounds/Injection-Moulding.jpg" alt="Custom Plastic Injection Moulding">
+          </div>
+          <div class="card-body">
+            <div class="card-category">Custom Tooling</div>
+            <h3 class="card-title">Custom Moulding Solutions</h3>
+            <p class="card-desc">Have a proprietary component design? We engineer precision moulds and run continuous high-volume production to your exact CAD specs.</p>
+            <div class="card-specs-list">
+              <div class="spec-item">
+                <span class="spec-label">Service</span>
+                <span class="spec-val">Die & Tool Dev</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Polymers</span>
+                <span class="spec-val">PP, ABS, Nylon</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Capacity</span>
+                <span class="spec-val">High-Volume</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Testing</span>
+                <span class="spec-val">Sample Batch</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20a%20custom%20plastic%20moulding%20requirement." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                <span>Discuss Design</span>
+              </a>
+              <a href="contacts.html" class="btn btn-outline">RFQ</a>
             </div>
           </div>
         </div>
 
       </div>
-    </section>
 
-    <!-- ==========================
-         Key Features
-    =========================== -->
-    <section class="fancybox-layout5 text-center pb-20">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-            <div class="heading text-center mb-60">
-              <span class="heading__subtitle">Why Choose Mittal Plastic Works</span>
-              <h2 class="heading__title">Engineered Plastic Solutions Tailored To Your Industry Needs</h2>
+      <div style="text-align: center; margin-top: 45px;">
+        <a href="products.html" class="btn btn-secondary btn-lg">View Complete Specifications & Catalog</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manufacturing Capabilities -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Production Infrastructure</span>
+        <h2>End-to-End Injection Moulding Capabilities</h2>
+        <p>Combining heavy-tonnage injection moulding machines with skilled tooling engineers to deliver high output with zero-defect consistency.</p>
+      </div>
+
+      <div class="capabilities-grid">
+        <div class="cap-card">
+          <div class="cap-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M6 20V10l6 4V10l6 4V4h2v16H2z"/></svg>
+          </div>
+          <h4>High-Tonnage Moulding</h4>
+          <p>Equipped with modern hydraulic and electric injection presses capable of continuous high-volume production cycles without thermal or dimensional drift.</p>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h4>Custom Tooling & Dies</h4>
+          <p>Full support for client-specific mould design, die fabrication, and trial component sampling to ensure strict adherence to technical drawings.</p>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h4>Strict Batch QA</h4>
+          <p>Every shipment undergoes rigorous checks for wall concentricity, impact resistance, and aesthetic finish, ensuring seamless automated assembly for clients.</p>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h4>Engineering Thermoplastics</h4>
+          <p>Processing a wide array of raw materials: Virgin Polypropylene (PP), High-Density Polyethylene (HDPE), Polystyrene, ABS, and filled nylon blends.</p>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h4>Pan-India Supply Chain</h4>
+          <p>Centrally located in Meerut (NCR corridor), enabling rapid logistics dispatch across North India and major industrial manufacturing clusters nationwide.</p>
+        </div>
+
+        <div class="cap-card">
+          <div class="cap-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+          </div>
+          <h4>Wholesale Cost Advantage</h4>
+          <p>Direct manufacturer pricing without middlemen markups, coupled with flexible volume contracts designed to sustain long-term business partnerships.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder & Facility Overview Section -->
+  <section class="section">
+    <div class="container about-grid">
+      <div class="about-images-cluster">
+        <div class="main-about-img">
+          <img src="assets/images/about/vineetmittal.jpg" alt="Vineet Mittal - Mittal Plastic Works">
+        </div>
+        <div class="founder-badge-card">
+          <h5>Mr. Vineet Kumar</h5>
+          <p>Founder & Managing Director</p>
+        </div>
+      </div>
+
+      <div class="about-text-col">
+        <span class="eyebrow">Two Decades of Trust</span>
+        <h2>Deep Moulding Experience, Built on Reliability</h2>
+        <p>Founded in Meerut — India's sports goods and industrial manufacturing hub — Mittal Plastic Works has grown under the guidance of Mr. Vineet Kumar into a trusted supplier of injection moulded parts.</p>
+        <p>We work directly with sports equipment brands, packaging manufacturers, and industrial converters who demand components that do not crack, warp, or fluctuate in size.</p>
+
+        <div class="feature-checklist">
+          <div class="check-item">
+            <div class="check-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <div>
+              <h5>20+ Years in Meerut's Industrial Hub</h5>
+              <p>Continuous operations in Sabun Godam, Baghpat Road with dedicated machine operators and die setters.</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <div>
+              <h5>Custom Dies & Component Development</h5>
+              <p>Experienced in precision tooling and fast prototype turnarounds for new industrial applications.</p>
+            </div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <div>
+              <h5>Committed Delivery Schedules</h5>
+              <p>Equipped with backup power and multi-shift machine capacity to fulfill large recurring orders without delay.</p>
             </div>
           </div>
         </div>
-        <div class="row">
-          <!-- Item #1 -->
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="fancybox-item">
-              <div class="fancybox__icon">
-                <img src="assets/images/icons/docs.png" alt="Precision Moulding">
-              </div>
-              <div class="fancybox__content">
-                <h4 class="fancybox__title">Precision Moulding</h4>
-                <p class="fancybox__desc">Advanced injection moulding machinery delivering tight dimensional tolerances and consistent wall thickness.</p>
-              </div>
-            </div>
+
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="about-us.html" class="btn btn-primary">Read Our Full Story</a>
+          <a href="contacts.html" class="btn btn-outline">Visit Our Facility</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B Buyer FAQ Section -->
+  <section class="section" style="background: var(--color-slate-100);">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Frequently Asked Questions</span>
+        <h2>Everything B2B Buyers Need to Know</h2>
+        <p>Clear answers regarding minimum order quantities, sample requests, custom die fabrication, and shipping logistics.</p>
+      </div>
+
+      <div class="faq-wrap">
+        <div class="faq-item open">
+          <button class="faq-question">
+            <span>What are your standard plastic core sizes and dimensions?</span>
+            <span class="faq-icon-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Our standard in-production cores include 45mm cores, 6mm slim cores, 45mm core + jalli assemblies, and 65mm heavy-duty core + jalli assemblies. We also fabricate custom diameter and custom length cores according to your engineering specifications.
           </div>
-          <!-- Item #2 -->
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="fancybox-item">
-              <div class="fancybox__icon">
-                <img src="assets/images/icons/fingerprint.png" alt="Quality Materials">
-              </div>
-              <div class="fancybox__content">
-                <h4 class="fancybox__title">Quality Polymers</h4>
-                <p class="fancybox__desc">High-grade raw materials selected for maximum tensile strength, impact resistance, and product longevity.</p>
-              </div>
-            </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can you provide physical samples before bulk production?</span>
+            <span class="faq-icon-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Yes! We gladly provide sample components for quality, fitment, and dimensional testing to verified manufacturers and wholesalers. Contact us via WhatsApp or our RFQ form with your shipping address to request trial samples.
           </div>
-          <!-- Item #3 -->
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="fancybox-item">
-              <div class="fancybox__icon">
-                <img src="assets/images/icons/board.png" alt="Custom Tooling">
-              </div>
-              <div class="fancybox__content">
-                <h4 class="fancybox__title">Custom Tooling</h4>
-                <p class="fancybox__desc">Tailored mould design and customization support to fabricate plastic components exactly to your specifications.</p>
-              </div>
-            </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can you build custom moulds for our proprietary products?</span>
+            <span class="faq-icon-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Yes, custom injection moulding is one of our core specialties. You can provide a 2D/3D CAD drawing or a physical sample part. Our team coordinates mould design, die manufacturing, trial pressings, and high-volume batch runs.
           </div>
-          <!-- Item #4 -->
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="fancybox-item">
-              <div class="fancybox__icon">
-                <img src="assets/images/icons/globe.png" alt="Pan India Delivery">
-              </div>
-              <div class="fancybox__content">
-                <h4 class="fancybox__title">Pan-India Dispatch</h4>
-                <p class="fancybox__desc">Prompt lead times, high volume production capacity, and dependable supply networks reaching businesses all across India.</p>
-              </div>
-            </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How do you handle shipping and logistics across India?</span>
+            <span class="faq-icon-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            Our facility in Meerut is strategically connected to major freight routes and transport hubs. We partner with reliable transport agencies and parcel logistics to ship carton-packed wholesale orders across Delhi-NCR, Punjab, Haryana, Maharashtra, and nationwide.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What polymers and material grades do you inject?</span>
+            <span class="faq-icon-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            We work primarily with Virgin Polypropylene (PP), High-Density Polyethylene (HDPE), High-Impact Polystyrene (HIPS), ABS, and Nylon blends based on the tensile, rigidity, and temperature requirements of your end-use application.
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ================================
-      About Section
-      =============================== -->
-    <section class="about-layout3 pb-0">
-      <div class="container-fluid col-padding-0">
-        <div class="row align-items-center">
-          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-5">
-            <div class="about__imgs-wrapper">
-              <div class="about__img">
-                <img src="assets/images/about/vineetmittal.jpg" alt="Vineet Mittal - Mittal Plastic Works" class="img-fluid w-100">
-              </div>
-              <div class="about__carousel">
-                <div class="carousel owl-carousel carousel-dots carousel-dots-light" data-slide="1" data-slide-md="1"
-                  data-slide-sm="1" data-autoplay="true" data-nav="false" data-dots="true" data-space="0"
-                  data-loop="true" data-speed="400">
-                  <div class="text__block">
-                    <h4 class="text__block-title">Our Vision</h4>
-                    <p class="text__block-desc">To be India's most dependable plastic injection moulding manufacturer, recognized for precision engineering, durability, and customer trust.</p>
-                  </div>
-                  <div class="text__block">
-                    <h4 class="text__block-title">Our Mission</h4>
-                    <p class="text__block-desc">Delivering industrial-grade plastic components with precision moulding, competitive pricing, and unwavering reliability for all our clients.</p>
-                  </div>
-                </div>
-              </div>
+  <!-- Request a Quote Section (Netlify Form) -->
+  <section class="section" id="rfq">
+    <div class="container">
+      <div class="contact-layout-grid">
+        <div class="contact-info-panel">
+          <span class="eyebrow">Connect Directly</span>
+          <h2>Request a Fast Wholesale Quote</h2>
+          <p>Get in touch with our technical team in Meerut for bulk pricing, sample dispatches, or custom die consultation.</p>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-card-content">
+              <h5>Manufacturing Facility</h5>
+              <p>509, Baghpat Rd, Sabun Godam, Chanderlok, Meerut, Uttar Pradesh 250002</p>
             </div>
           </div>
-          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-7">
-            <div class="content-wrapper">
-              <span class="heading__subtitle">Crafted with Precision & 20+ Years of Manufacturing Expertise</span>
-              <h2 class="heading__title mb-40">We Create Industrial-Grade Products That Power Everyday Industries.</h2>
-              <div class="row">
-                <div class="col-sm-6">
-                  <p class="heading__desc-primary mb-20">Founded in Meerut — the sports goods manufacturing hub of India — Mittal Plastic Works has earned a reputation for precision injection moulding and robust product quality.</p>
-                  <img src="assets/images/about/Signuture.png" alt="Signature" class="mb-20">
-                </div>
-                <div class="col-sm-6">
-                  <p class="heading__desc">Our company is not just about plastic manufacturing; we partner with businesses to solve functional engineering challenges. From high-tolerance cores to intricate jalli assemblies, we oversee every step of production.</p>
-                  <p class="heading__desc">We take pride in our long-term client relationships and continually upgrade our capabilities to serve sports goods, packaging, and industrial sectors across India.</p>
-                  <a href="about-us.html" class="btn btn__primary btn__icon">
-                    <span>Learn More About Us</span>
-                    <i class="fa fa-long-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="contact-card-content">
+              <h5>Direct Phone & WhatsApp</h5>
+              <p><a href="tel:+919837075324"><b>+91-9837075324</b></a> (Call & WhatsApp Available)</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-card-content">
+              <h5>Email Inquiries</h5>
+              <p><a href="mailto:mplasticw@gmail.com"><b>mplasticw@gmail.com</b></a> (Quick response within 24h)</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- =========================== 
-      Featured Products 
-    ============================= -->
-    <section class="portfolio-grid text-center pb-70">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-            <div class="heading text-center mb-40">
-              <span class="heading__subtitle">Our Manufacturing Portfolio</span>
-              <h2 class="heading__title">Featured Products</h2>
-              <p class="heading__desc">Precision-manufactured plastic cores, jallis, and assemblies designed for high durability, dimensional accuracy, and optimal performance.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <ul class="list-unstyled portfolio-filter d-flex flex-wrap justify-content-center mb-40">
-              <li><a class="filter active" href="#" data-filter="all">All Products</a></li>
-              <li><a class="filter" href="#" data-filter=".filter-cores">Plastic Cores</a></li>
-              <li><a class="filter" href="#" data-filter=".filter-assemblies">Core + Jalli Assemblies</a></li>
-              <li><a class="filter" href="#" data-filter=".filter-components">Components</a></li>
-            </ul>
-          </div>
-        </div>
-        <div id="filtered-items-wrap" class="row">
-          
-          <!-- Product #1 -->
-          <div class="col-sm-6 col-md-4 col-lg-4 mix filter-cores">
-            <div class="portfolio-item">
-              <div class="portfolio__img">
-                <img src="assets/images/products/1.png" alt="45mm Plastic Core">
-                <div class="portfolio__hover">
-                  <div class="portfolio__hover-content">
-                    <a class="zoom__icon popup-gallery-item" href="assets/images/products/1.png">
-                      <i class="fa fa-arrows-alt" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio__info">
-                <h4 class="portfolio__title"><a href="products.html">45mm Core</a></h4>
-                <div class="portfolio__cat">
-                  <a href="products.html">Plastic Cores</a>
-                </div>
-              </div>
-            </div>
+        <!-- RFQ Form Card -->
+        <div class="rfq-form-card">
+          <div id="formSuccessAlert" style="display:none; background:#ecfdf5; border:1px solid #a7f3d0; color:#065f46; padding:16px 20px; border-radius:10px; margin-bottom:24px; font-weight:600; align-items:center; gap:10px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Thank you! Your quotation request has been received. Our team will contact you shortly.</span>
           </div>
 
-          <!-- Product #2 -->
-          <div class="col-sm-6 col-md-4 col-lg-4 mix filter-assemblies">
-            <div class="portfolio-item">
-              <div class="portfolio__img">
-                <img src="assets/images/products/3.png" alt="45mm Core with Jalli">
-                <div class="portfolio__hover">
-                  <div class="portfolio__hover-content">
-                    <a class="zoom__icon popup-gallery-item" href="assets/images/products/3.png">
-                      <i class="fa fa-arrows-alt" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio__info">
-                <h4 class="portfolio__title"><a href="products.html">45mm Core + Jalli</a></h4>
-                <div class="portfolio__cat">
-                  <a href="products.html">Assemblies</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <form name="rfq" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="index.html?success=true#rfq">
+            <input type="hidden" name="form-name" value="rfq" />
+            <p style="display:none;"><label>Bot field: <input name="bot-field" /></label></p>
 
-          <!-- Product #3 -->
-          <div class="col-sm-6 col-md-4 col-lg-4 mix filter-cores">
-            <div class="portfolio-item">
-              <div class="portfolio__img">
-                <img src="assets/images/products/2.png" alt="6mm Plastic Core">
-                <div class="portfolio__hover">
-                  <div class="portfolio__hover-content">
-                    <a class="zoom__icon popup-gallery-item" href="assets/images/products/2.png">
-                      <i class="fa fa-arrows-alt" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="rfq-name">Your Name *</label>
+                <input type="text" id="rfq-name" name="name" class="form-control" placeholder="e.g. Rajesh Kumar" required>
               </div>
-              <div class="portfolio__info">
-                <h4 class="portfolio__title"><a href="products.html">6mm Core</a></h4>
-                <div class="portfolio__cat">
-                  <a href="products.html">Plastic Cores</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Product #4 -->
-          <div class="col-sm-6 col-md-4 col-lg-4 mix filter-assemblies">
-            <div class="portfolio-item">
-              <div class="portfolio__img">
-                <img src="assets/images/products/5.png" alt="45mm Core and Jalli Assembly">
-                <div class="portfolio__hover">
-                  <div class="portfolio__hover-content">
-                    <a class="zoom__icon popup-gallery-item" href="assets/images/products/5.png">
-                      <i class="fa fa-arrows-alt" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </div>
+              <div class="form-group">
+                <label class="form-label" for="rfq-phone">Phone / WhatsApp *</label>
+                <input type="tel" id="rfq-phone" name="phone" class="form-control" placeholder="e.g. +91 98765 43210" required>
               </div>
-              <div class="portfolio__info">
-                <h4 class="portfolio__title"><a href="products.html">45mm Core + Jalli (Base View)</a></h4>
-                <div class="portfolio__cat">
-                  <a href="products.html">Assemblies</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Product #5 -->
-          <div class="col-sm-6 col-md-4 col-lg-4 mix filter-cores">
-            <div class="portfolio-item">
-              <div class="portfolio__img">
-                <img src="assets/images/products/4.png" alt="6mm Core Side Profile">
-                <div class="portfolio__hover">
-                  <div class="portfolio__hover-content">
-                    <a class="zoom__icon popup-gallery-item" href="assets/images/products/4.png">
-                      <i class="fa fa-arrows-alt" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </div>
+              <div class="form-group">
+                <label class="form-label" for="rfq-email">Email Address *</label>
+                <input type="email" id="rfq-email" name="email" class="form-control" placeholder="e.g. rajesh@company.com" required>
               </div>
-              <div class="portfolio__info">
-                <h4 class="portfolio__title"><a href="products.html">6mm Core (Side View)</a></h4>
-                <div class="portfolio__cat">
-                  <a href="products.html">Plastic Cores</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Product #6 -->
-          <div class="col-sm-6 col-md-4 col-lg-4 mix filter-assemblies">
-            <div class="portfolio-item">
-              <div class="portfolio__img">
-                <img src="assets/images/products/6.png" alt="65mm Core with Jalli">
-                <div class="portfolio__hover">
-                  <div class="portfolio__hover-content">
-                    <a class="zoom__icon popup-gallery-item" href="assets/images/products/6.png">
-                      <i class="fa fa-arrows-alt" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                </div>
+              <div class="form-group">
+                <label class="form-label" for="rfq-product">Product Interest *</label>
+                <select id="rfq-product" name="product_interest" class="form-control" required>
+                  <option value="" disabled selected>Select Product Category</option>
+                  <option value="45mm Core">45mm Plastic Core</option>
+                  <option value="6mm Core">6mm Plastic Core</option>
+                  <option value="45mm Core + Jalli">45mm Core + Jalli Assembly</option>
+                  <option value="65mm Core + Jalli">65mm Core + Jalli Assembly</option>
+                  <option value="Plastic Jalli">Plastic Jalli (Mesh Component)</option>
+                  <option value="Custom Injection Moulding">Custom Tooling / Moulding</option>
+                  <option value="General Wholesale Inquiry">Other Bulk Wholesale Inquiry</option>
+                </select>
               </div>
-              <div class="portfolio__info">
-                <h4 class="portfolio__title"><a href="products.html">65mm Core + Jalli</a></h4>
-                <div class="portfolio__cat">
-                  <a href="products.html">Assemblies</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-        </div>
-        <div class="row mt-30">
-          <div class="col-12 text-center">
-            <a href="products.html" class="btn btn__secondary btn__bordered">View Full Product Catalog</a>
-          </div>
-        </div>
-      </div>
-    </section>
+              <div class="form-group full-width">
+                <label class="form-label" for="rfq-details">Order Details & Quantities *</label>
+                <textarea id="rfq-details" name="details" class="form-control" placeholder="Please specify required quantities, dimensions, delivery location, or special requirements:" required></textarea>
+              </div>
 
-    <!-- ================================
-       Manufacturing Capabilities
-      =============================== -->
-    <section class="banner-layout2 animated-Progressbars pt-0 pb-110">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <div class="heading mb-30">
-              <span class="heading__subtitle">Manufacturing Precision</span>
-              <h2 class="heading__title">Dedicated To High Standards & Strict Quality Control</h2>
-              <p class="heading__desc">Mittal Plastic Works operates advanced plastic injection moulding machines in Meerut, delivering high-tolerance components to clients across India. Our rigorous quality checks guarantee structural integrity and uniform finish in every batch.</p>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-6">
-            <!-- progress 1 -->
-            <div class="progress-item">
-              <h6 class="progress__title">Injection Moulding Precision</h6>
-              <div class="progress">
-                <div class="progress-bar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" role="progressbar">
-                  <span class="progress__percentage"></span>
-                </div>
-              </div>
-            </div>
-            <!-- progress 2 -->
-            <div class="progress-item">
-              <h6 class="progress__title">Production Quality & Rigidity</h6>
-              <div class="progress">
-                <div class="progress-bar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" role="progressbar">
-                  <span class="progress__percentage"></span>
-                </div>
-              </div>
-            </div>
-            <!-- progress 3 -->
-            <div class="progress-item">
-              <h6 class="progress__title">Sports Goods & Packaging Standards</h6>
-              <div class="progress">
-                <div class="progress-bar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" role="progressbar">
-                  <span class="progress__percentage"></span>
-                </div>
-              </div>
-            </div>
-            <!-- progress 4 -->
-            <div class="progress-item">
-              <h6 class="progress__title">Custom Moulding & Development</h6>
-              <div class="progress">
-                <div class="progress-bar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" role="progressbar">
-                  <span class="progress__percentage"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================== 
-      Counters
-    ============================= -->
-    <section class="counters text-center border-bottom">
-      <div class="container">
-        <div class="row">
-          <!-- counter 1 -->
-          <div class="col-6 col-sm-3">
-            <div class="counter-item">
-              <h4 class="counter">20</h4>
-              <p class="counter__desc">Years of Experience</p>
-            </div>
-          </div>
-          <!-- counter 2 -->
-          <div class="col-6 col-sm-3">
-            <div class="counter-item">
-              <h4 class="counter">100</h4>
-              <p class="counter__desc">Satisfied Clients</p>
-            </div>
-          </div>
-          <!-- counter 3 -->
-          <div class="col-6 col-sm-3">
-            <div class="counter-item">
-              <h4 class="counter">10</h4>
-              <p class="counter__desc">Million+ Parts Delivered</p>
-            </div>
-          </div>
-          <!-- counter 4 -->
-          <div class="col-6 col-sm-3">
-            <div class="counter-item">
-              <h4 class="counter">100</h4>
-              <p class="counter__desc">% Quality Assured</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================================
-      Call to Action
-      =============================== -->
-    <section class="cta-layout1 bg-overlay">
-      <div class="bg-img">
-        <img src="assets/images/backgrounds/1.jpg" alt="Mittal Plastic Works">
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <h3 class="cta__title mb-40">Have a Custom Plastic Moulding Requirement?</h3>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-11 offset-xl-1">
-            <div class="row align-items-center">
-              <div class="col-sm-12 col-md-12 col-lg-5">
-                <p class="cta__desc">From concept and mould development to high-volume manufacturing, Mittal Plastic Works delivers reliable plastic components on schedule.</p>
-              </div>
-              <div class="col-sm-12 col-md-12 col-lg-4">
-                <p class="cta__desc">Connect directly with our team in Meerut for bulk quotes, sample requests, and technical specifications.</p>
-              </div>
-              <div class="col-sm-12 col-md-12 col-lg-3">
-                <a href="contacts.html" class="btn btn__white btn__icon mb-2">
-                  <span>Contact Us</span>
-                  <i class="fa fa-long-arrow-right"></i>
+              <div class="form-group full-width" style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 10px;">
+                <button type="submit" class="btn btn-primary btn-lg">Submit Request for Quote</button>
+                <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20an%20urgent%20requirement%20for%20plastic%20cores." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                  <span>Chat on WhatsApp</span>
                 </a>
               </div>
             </div>
-          </div>
+          </form>
         </div>
-      </div>
-    </section>
-
-    <!-- ========================
-      Footer
-    ========================== -->
-    <footer class="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 footer__widget footer__widget-about">
-              <h6 class="footer__widget-title">About Mittal Plastic Works</h6>
-              <div class="footer__widget-content d-flex">
-                <div class="widget__about-logo">
-                  <img src="assets/images/logo/mpw-logo-light-mini.png" alt="MPW Logo">
-                </div>
-                <div class="widget__about-text">
-                  <p>A trusted plastic injection moulding manufacturer based in Meerut, Uttar Pradesh. Specializing in high-tolerance plastic cores, jallis, and custom engineered components for sports goods, packaging, and industrial applications.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 footer__widget footer__widget-nav">
-              <h6 class="footer__widget-title">Quick Links</h6>
-              <div class="footer__widget-content">
-                <nav>
-                  <ul class="list-unstyled">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="products.html">Our Products</a></li>
-                    <li><a href="contacts.html">Contact Us</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 footer__widget">
-              <h6 class="footer__widget-title">Contact & Facility</h6>
-              <div class="footer__widget-content">
-                <p class="mb-10"><i class="fa fa-map-marker text-success mr-2"></i> 509, Baghpat Rd, Sabun Godam, Chanderlok, Meerut, Uttar Pradesh 250002</p>
-                <p class="mb-10"><i class="fa fa-envelope text-success mr-2"></i> <a href="mailto:mplasticw@gmail.com" class="color-white">mplasticw@gmail.com</a></p>
-                <p class="mb-10"><i class="fa fa-phone text-success mr-2"></i> <a href="tel:+919837075324" class="color-white">+91-9837075324</a></p>
-                <p class="mb-0"><i class="fa fa-whatsapp text-success mr-2"></i> <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="color-white">WhatsApp Inquiry</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-              <div class="footer__copyright">
-                <p class="fz-13 mb-0">&copy; <span id="currentYear">2026</span> Mittal Plastic Works. All Rights Reserved.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20would%20like%20to%20inquire%20about%20your%20products." 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       aria-label="Chat on WhatsApp">
-      <i class="fa fa-whatsapp"></i>
-      <span>Chat on WhatsApp</span>
-    </a>
-
-    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa fa-long-arrow-up"></i></button>
-
-    <div class="hamburger-menu">
-      <i class="hamburger__menu-close">&times;</i>
-      <div class="hamburger__menu-content">
-        <h3 class="custome-menus"><a class="hamburger__menu-email" href="index.html">Home</a></h3>
-        <h3 class="custome-menus"><a class="hamburger__menu-email" href="about-us.html">About Us</a></h3>
-        <h3 class="custome-menus"><a class="hamburger__menu-email" href="products.html">Our Products</a></h3>
-        <h3 class="custome-menus"><a class="hamburger__menu-email" href="contacts.html">Contact Us</a></h3>
-        
-        <p class="color-white font-weight-bold custom-margin-top">Contact Direct</p>
-        <p class="color-white fz-14 mb-10"><i class="fa fa-phone mr-2"></i> +91-9837075324</p>
-        <p class="color-white fz-14 mb-20"><i class="fa fa-envelope mr-2"></i> mplasticw@gmail.com</p>
-        <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="btn btn__white btn__bordered btn__sm">
-          <i class="fa fa-whatsapp mr-2 text-success"></i> Chat on WhatsApp
-        </a>
       </div>
     </div>
+  </section>
 
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/images/logo/logo-light.svg" alt="Mittal Plastic Works Logo" class="footer-logo">
+          <p class="footer-text">Mittal Plastic Works is an established plastic injection moulding manufacturer based in Meerut, UP. Specializing in high-tolerance plastic cores, jalli assemblies, and custom engineered plastic solutions for over 20 years.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Our Enterprise</a>
+            <a href="products.html">Product Catalog</a>
+            <a href="contacts.html">Contact & Location</a>
+            <a href="contacts.html#rfq">Request a Quote</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Core Products</h5>
+          <div class="footer-links">
+            <a href="products.html">45mm Plastic Core</a>
+            <a href="products.html">6mm Plastic Core</a>
+            <a href="products.html">45mm Core + Jalli</a>
+            <a href="products.html">65mm Core + Jalli</a>
+            <a href="products.html">Plastic Jalli (Mesh)</a>
+            <a href="products.html">Custom Injection Moulding</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Factory Contact</h5>
+          <p class="footer-text">
+            509, Baghpat Rd, Sabun Godam, Chanderlok, Meerut, Uttar Pradesh 250002<br><br>
+            Phone: <a href="tel:+919837075324" style="color:var(--color-white); font-weight:600;">+91-9837075324</a><br>
+            Email: <a href="mailto:mplasticw@gmail.com" style="color:var(--color-white); font-weight:600;">mplasticw@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year">2026</span> Mittal Plastic Works. All Rights Reserved.</div>
+        <div>Precision Plastic Injection Moulding • Meerut, Uttar Pradesh, India</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20would%20like%20to%20inquire%20about%20your%20products." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat directly on WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <!-- Mobile Bottom Action Bar (One-Tap Access) -->
+  <div class="mobile-bottom-bar">
+    <a href="tel:+919837075324" class="mobile-bottom-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="mobile-bottom-btn highlight">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="contacts.html" class="mobile-bottom-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <span>Quote</span>
+    </a>
   </div>
 
-  <script src="assets/js/jquery-3.3.1.min.js"></script>
-  <script src="assets/js/plugins.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script>
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-  </script>
+  <!-- Vanilla Scripts -->
+  <script src="assets/js/modern.js"></script>
 </body>
 
 </html>

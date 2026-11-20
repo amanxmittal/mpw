@@ -5,385 +5,613 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="Explore the plastic injection moulded product catalog of Mittal Plastic Works. Specializing in 45mm cores, 6mm cores, 65mm cores, and jalli assemblies in Meerut.">
+  <meta name="description" content="Technical product catalog of Mittal Plastic Works. Specifications for 45mm cores, 6mm cores, 65mm cores, jalli assemblies, and custom injection moulds in Meerut, India.">
   <link href="assets/images/favicon/mpwfavicon.png" rel="icon">
-  <title>Our Products | Mittal Plastic Works - Plastic Cores & Jallis</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700%7cRoboto:400,500,700&amp;display=swap">
-  <link rel="stylesheet" href="assets/css/libraries.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Our Products & Specifications | Mittal Plastic Works</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Inline Theme Script to Prevent Theme Flash (FOUC) -->
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('mpw-theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Modern Design System Stylesheet -->
+  <link rel="stylesheet" href="assets/css/modern.css" />
 </head>
 
 <body>
-  <div class="wrapper">
-    <!-- =========================
-        Header 
-    =========================== -->
-    <header class="header header-transparent">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo/logo-light.svg" class="logo-light" alt="Mittal Plastic Works">
-            <img src="assets/images/logo/logo-dark.svg" class="logo-dark" alt="Mittal Plastic Works">
-          </a>
-          <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-            <span class="menu-lines"><span></span></span>
-          </button>
-          <div class="collapse navbar-collapse" id="mainNavigation">
-            <ul class="navbar-nav mr-auto ml-auto">
-              <li class="nav__item">
-                <a href="index.html" class="nav__item-link">Home</a>
-              </li>
-              <li class="nav__item">
-                <a href="about-us.html" class="nav__item-link">About Us</a>
-              </li>
-              <li class="nav__item">
-                <a href="products.html" class="nav__item-link active">Our Products</a>
-              </li>
-              <li class="nav__item">
-                <a href="contacts.html" class="nav__item-link">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="navbar-actions">
-            <ul class="navbar__actions-list list-unstyled mb-0 d-flex align-items-center">
-              <li><a href="contacts.html" class="action__btn btn btn__white action__btn-contact">Get a Quote</a></li>
-              <li><a href="#" class="action__btn action__btn-humburgerMenu" aria-label="Menu"><i class="icon-menu"></i></a></li>
-            </ul>
-          </div>
-        </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Mittal Plastic Works Home">
+        <img src="assets/images/logo/logo-dark.svg" alt="Mittal Plastic Works Logo" class="logo-for-light">
+        <img src="assets/images/logo/logo-light.svg" alt="Mittal Plastic Works Logo" class="logo-for-dark">
+        <span class="brand-badge">Meerut, UP</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about-us.html" class="nav-link">About Us</a>
+        <a href="products.html" class="nav-link active">Our Products</a>
+        <a href="contacts.html" class="nav-link">Contact & RFQ</a>
       </nav>
-    </header>
 
-    <!-- ========================
-       Page Title 
-    =========================== -->
-    <section class="page-title page-title-layout5 text-center bg-overlay">
-      <div class="bg-img"><img src="assets/images/backgrounds/11.jpg" alt="Mittal Plastic Works Products"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-            <h1 class="pagetitle__heading">Our Product Catalog</h1>
-            <p class="pagetitle__desc">High-precision injection moulded plastic cores, jalli assemblies, and custom industrial components manufactured in Meerut, UP.</p>
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb justify-content-center">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Products</li>
-              </ol>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </section>
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
 
-    <!-- =========================== 
-      Products Catalog Grid
-    ============================= -->
-    <section class="portfolio-grid text-center pb-80 pt-80">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-            <div class="heading text-center mb-40">
-              <span class="heading__subtitle">Industrial & Sports Goods Components</span>
-              <h2 class="heading__title">Engineered Plastic Products</h2>
-              <p class="heading__desc">Manufactured using virgin polymers and high-grade moulding dies to ensure accurate dimensions, high impact resistance, and dependable performance.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Filter Buttons -->
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12">
-            <ul class="list-unstyled portfolio-filter d-flex flex-wrap justify-content-center mb-50">
-              <li><a class="filter active" href="#" data-filter="all">All Products</a></li>
-              <li><a class="filter" href="#" data-filter=".filter-cores">Plastic Cores</a></li>
-              <li><a class="filter" href="#" data-filter=".filter-assemblies">Core + Jalli Assemblies</a></li>
-              <li><a class="filter" href="#" data-filter=".filter-components">Components & Jallis</a></li>
-              <li><a class="filter" href="#" data-filter=".filter-custom">Custom Moulding</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Products List -->
-        <div id="filtered-items-wrap" class="row">
-          
-          <!-- Product #1: 45mm Core -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mix filter-cores">
-            <div class="product-card">
-              <div class="product-card__img">
-                <img src="assets/images/products/1.png" alt="45mm Core">
-              </div>
-              <div class="product-card__content">
-                <span class="product-card__category">Plastic Cores</span>
-                <h4 class="product-card__title">45mm Plastic Core</h4>
-                <p class="product-card__desc">Standard 45mm diameter injection moulded core. Engineered for high rigidity and dimensional accuracy in sports and packaging applications.</p>
-                <div class="product-card__btn-group">
-                  <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%2045mm%20Plastic%20Core." target="_blank" rel="noopener noreferrer" class="btn btn__primary btn__sm">
-                    <i class="fa fa-whatsapp mr-1"></i> Inquire
-                  </a>
-                  <a href="contacts.html" class="btn btn__secondary btn__sm">Get Quote</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product #2: 45mm Core + Jalli -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mix filter-assemblies">
-            <div class="product-card">
-              <div class="product-card__img">
-                <img src="assets/images/products/3.png" alt="45mm Core + Jalli">
-              </div>
-              <div class="product-card__content">
-                <span class="product-card__category">Core + Jalli Assemblies</span>
-                <h4 class="product-card__title">45mm Core + Jalli</h4>
-                <p class="product-card__desc">Integrated 45mm core coupled with a protective plastic jalli grid. Widely used in sports goods packaging and shuttlecock tubes.</p>
-                <div class="product-card__btn-group">
-                  <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%2045mm%20Core%20+%20Jalli." target="_blank" rel="noopener noreferrer" class="btn btn__primary btn__sm">
-                    <i class="fa fa-whatsapp mr-1"></i> Inquire
-                  </a>
-                  <a href="contacts.html" class="btn btn__secondary btn__sm">Get Quote</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product #3: 6mm Core -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mix filter-cores">
-            <div class="product-card">
-              <div class="product-card__img">
-                <img src="assets/images/products/2.png" alt="6mm Plastic Core">
-              </div>
-              <div class="product-card__content">
-                <span class="product-card__category">Plastic Cores</span>
-                <h4 class="product-card__title">6mm Plastic Core</h4>
-                <p class="product-card__desc">Compact 6mm plastic core manufactured with precision dies. Delivers consistent internal diameter and clean flash-free edges.</p>
-                <div class="product-card__btn-group">
-                  <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%206mm%20Plastic%20Core." target="_blank" rel="noopener noreferrer" class="btn btn__primary btn__sm">
-                    <i class="fa fa-whatsapp mr-1"></i> Inquire
-                  </a>
-                  <a href="contacts.html" class="btn btn__secondary btn__sm">Get Quote</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product #4: 45mm Core + Jalli (Base View) -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mix filter-assemblies">
-            <div class="product-card">
-              <div class="product-card__img">
-                <img src="assets/images/products/5.png" alt="45mm Core + Jalli (Base View)">
-              </div>
-              <div class="product-card__content">
-                <span class="product-card__category">Core + Jalli Assemblies</span>
-                <h4 class="product-card__title">45mm Core + Jalli (Base View)</h4>
-                <p class="product-card__desc">Underside view showcasing the structural ribbing and secure locking ring designed for vibration resistance and secure fitment.</p>
-                <div class="product-card__btn-group">
-                  <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%2045mm%20Core%20+%20Jalli%20assembly." target="_blank" rel="noopener noreferrer" class="btn btn__primary btn__sm">
-                    <i class="fa fa-whatsapp mr-1"></i> Inquire
-                  </a>
-                  <a href="contacts.html" class="btn btn__secondary btn__sm">Get Quote</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product #5: 6mm Core (Profile View) -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mix filter-cores">
-            <div class="product-card">
-              <div class="product-card__img">
-                <img src="assets/images/products/4.png" alt="6mm Core Profile View">
-              </div>
-              <div class="product-card__content">
-                <span class="product-card__category">Plastic Cores</span>
-                <h4 class="product-card__title">6mm Core (Side Profile)</h4>
-                <p class="product-card__desc">Profile perspective highlighting concentricity, surface smoothness, and high structural durability for demanding industrial applications.</p>
-                <div class="product-card__btn-group">
-                  <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%206mm%20Cores." target="_blank" rel="noopener noreferrer" class="btn btn__primary btn__sm">
-                    <i class="fa fa-whatsapp mr-1"></i> Inquire
-                  </a>
-                  <a href="contacts.html" class="btn btn__secondary btn__sm">Get Quote</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product #6: 65mm Core + Jalli -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mix filter-assemblies">
-            <div class="product-card">
-              <div class="product-card__img">
-                <img src="assets/images/products/6.png" alt="65mm Core + Jalli">
-              </div>
-              <div class="product-card__content">
-                <span class="product-card__category">Core + Jalli Assemblies</span>
-                <h4 class="product-card__title">65mm Core + Jalli</h4>
-                <p class="product-card__desc">Heavy-duty 65mm large core paired with durable jalli mesh. Designed for heavier packaging requirements and specialized sports gear.</p>
-                <div class="product-card__btn-group">
-                  <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%2065mm%20Core%20+%20Jalli." target="_blank" rel="noopener noreferrer" class="btn btn__primary btn__sm">
-                    <i class="fa fa-whatsapp mr-1"></i> Inquire
-                  </a>
-                  <a href="contacts.html" class="btn btn__secondary btn__sm">Get Quote</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product #7: Plastic Jalli Component -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mix filter-components">
-            <div class="product-card">
-              <div class="product-card__img">
-                <img src="assets/images/products/7.png" alt="Plastic Jalli Component">
-              </div>
-              <div class="product-card__content">
-                <span class="product-card__category">Components & Jallis</span>
-                <h4 class="product-card__title">Plastic Jalli (Mesh Component)</h4>
-                <p class="product-card__desc">Injection moulded plastic jalli offering balanced airflow, impact cushioning, and lightweight structural reinforcement.</p>
-                <div class="product-card__btn-group">
-                  <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20Plastic%20Jalli%20components." target="_blank" rel="noopener noreferrer" class="btn btn__primary btn__sm">
-                    <i class="fa fa-whatsapp mr-1"></i> Inquire
-                  </a>
-                  <a href="contacts.html" class="btn btn__secondary btn__sm">Get Quote</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Product #8: Custom Injection Moulding -->
-          <div class="col-sm-12 col-md-6 col-lg-4 mix filter-custom">
-            <div class="product-card">
-              <div class="product-card__img">
-                <img src="assets/images/backgrounds/Injection-Moulding.jpg" alt="Custom Plastic Injection Moulding">
-              </div>
-              <div class="product-card__content">
-                <span class="product-card__category">Custom Moulding</span>
-                <h4 class="product-card__title">Custom Moulding Solutions</h4>
-                <p class="product-card__desc">Have a specific design or custom component? We support mould tool development, prototype sampling, and high-volume batch production.</p>
-                <div class="product-card__btn-group">
-                  <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20a%20custom%20plastic%20moulding%20requirement." target="_blank" rel="noopener noreferrer" class="btn btn__primary btn__sm">
-                    <i class="fa fa-whatsapp mr-1"></i> Inquire
-                  </a>
-                  <a href="contacts.html" class="btn btn__secondary btn__sm">Discuss Project</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ================================
-      Bulk Orders & Custom Inquiries Banner
-      =============================== -->
-    <section class="banner-layout1 bg-gray py-70">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-sm-12 col-md-8 col-lg-8">
-            <h3 class="mb-10 font-weight-bold">Need Custom Dimensions, Color Matching or Bulk Wholesale Pricing?</h3>
-            <p class="mb-0 text-muted">We provide component samples, customized packaging, and volume discounts for regular B2B supply agreements across India.</p>
-          </div>
-          <div class="col-sm-12 col-md-4 col-lg-4 text-md-right mt-3 mt-md-0">
-            <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20would%20like%20to%20request%20samples%20and%20bulk%20pricing." target="_blank" rel="noopener noreferrer" class="btn btn__primary btn__sm mr-2 mb-2">
-              <i class="fa fa-whatsapp mr-1"></i> WhatsApp
-            </a>
-            <a href="contacts.html" class="btn btn__secondary btn__sm mb-2">Contact Us</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================
-      Footer
-    ========================== -->
-    <footer class="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 footer__widget footer__widget-about">
-              <h6 class="footer__widget-title">About Mittal Plastic Works</h6>
-              <div class="footer__widget-content d-flex">
-                <div class="widget__about-logo">
-                  <img src="assets/images/logo/mpw-logo-light-mini.png" alt="MPW Logo">
-                </div>
-                <div class="widget__about-text">
-                  <p>A trusted plastic injection moulding manufacturer based in Meerut, Uttar Pradesh. Specializing in high-tolerance plastic cores, jallis, and custom engineered components for sports goods, packaging, and industrial applications.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 footer__widget footer__widget-nav">
-              <h6 class="footer__widget-title">Quick Links</h6>
-              <div class="footer__widget-content">
-                <nav>
-                  <ul class="list-unstyled">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="products.html">Our Products</a></li>
-                    <li><a href="contacts.html">Contact Us</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 footer__widget">
-              <h6 class="footer__widget-title">Contact & Facility</h6>
-              <div class="footer__widget-content">
-                <p class="mb-10"><i class="fa fa-map-marker text-success mr-2"></i> 509, Baghpat Rd, Sabun Godam, Chanderlok, Meerut, Uttar Pradesh 250002</p>
-                <p class="mb-10"><i class="fa fa-envelope text-success mr-2"></i> <a href="mailto:mplasticw@gmail.com" class="color-white">mplasticw@gmail.com</a></p>
-                <p class="mb-10"><i class="fa fa-phone text-success mr-2"></i> <a href="tel:+919837075324" class="color-white">+91-9837075324</a></p>
-                <p class="mb-0"><i class="fa fa-whatsapp text-success mr-2"></i> <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="color-white">WhatsApp Inquiry</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-              <div class="footer__copyright">
-                <p class="fz-13 mb-0">&copy; <span id="currentYear">2026</span> Mittal Plastic Works. All Rights Reserved.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20would%20like%20to%20inquire%20about%20your%20products." 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       aria-label="Chat on WhatsApp">
-      <i class="fa fa-whatsapp"></i>
-      <span>Chat on WhatsApp</span>
-    </a>
-
-    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa fa-long-arrow-up"></i></button>
-
-    <div class="hamburger-menu">
-      <i class="hamburger__menu-close">&times;</i>
-      <div class="hamburger__menu-content">
-        <h3 class="custome-menus"><a class="hamburger__menu-email" href="index.html">Home</a></h3>
-        <h3 class="custome-menus"><a class="hamburger__menu-email" href="about-us.html">About Us</a></h3>
-        <h3 class="custome-menus"><a class="hamburger__menu-email" href="products.html">Our Products</a></h3>
-        <h3 class="custome-menus"><a class="hamburger__menu-email" href="contacts.html">Contact Us</a></h3>
-        
-        <p class="color-white font-weight-bold custom-margin-top">Contact Direct</p>
-        <p class="color-white fz-14 mb-10"><i class="fa fa-phone mr-2"></i> +91-9837075324</p>
-        <p class="color-white fz-14 mb-20"><i class="fa fa-envelope mr-2"></i> mplasticw@gmail.com</p>
-        <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="btn btn__white btn__bordered btn__sm">
-          <i class="fa fa-whatsapp mr-2 text-success"></i> Chat on WhatsApp
+        <a href="tel:+919837075324" class="btn btn-outline btn-sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91-9837075324</span>
         </a>
+        <a href="contacts.html" class="btn btn-primary btn-sm">Get a Quote</a>
+
+        <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
       </div>
     </div>
+  </header>
 
+  <!-- Products Hero Section -->
+  <section class="section-sm section-dark" style="padding-top: calc(var(--header-height) + 50px); border-bottom: 1px solid var(--color-slate-800);">
+    <div class="container text-center">
+      <span class="eyebrow" style="color:var(--color-accent);">Product Catalog & Technical Specs</span>
+      <h1>Precision Moulded Plastic Solutions</h1>
+      <p style="max-width: 680px; margin: 16px auto 0 auto; color: var(--color-slate-300);">Manufactured in our Meerut facility with high-tonnage multi-cavity presses, high-grade polymers, and strict quality control.</p>
+    </div>
+  </section>
+
+  <!-- Product Catalog Section -->
+  <section class="section">
+    <div class="container">
+      
+      <!-- Filter Tabs -->
+      <div class="filter-pills-wrap">
+        <button class="filter-btn active" data-filter="all">All Products (8)</button>
+        <button class="filter-btn" data-filter="cores">Plastic Cores</button>
+        <button class="filter-btn" data-filter="assemblies">Core + Jalli Assemblies</button>
+        <button class="filter-btn" data-filter="components">Components & Jalli</button>
+        <button class="filter-btn" data-filter="custom">Custom Tooling</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid">
+
+        <!-- Card 1: 45mm Plastic Core -->
+        <div class="modern-product-card" data-category="cores">
+          <span class="card-badge">Industry Standard</span>
+          <div class="card-img-box">
+            <img src="assets/images/products/1.png" alt="45mm Plastic Core">
+          </div>
+          <div class="card-body">
+            <div class="card-category">Plastic Cores</div>
+            <h3 class="card-title">45mm Plastic Core</h3>
+            <p class="card-desc">High-rigidity cylindrical plastic core designed for sports packaging tubes and industrial film winding. Maintains cylindrical uniformity under pressure.</p>
+            <div class="card-specs-list">
+              <div class="spec-item">
+                <span class="spec-label">Outer Diameter</span>
+                <span class="spec-val">Ø 45.0 mm</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Material</span>
+                <span class="spec-val">Virgin Grade PP</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Tolerance</span>
+                <span class="spec-val">± 0.05 mm</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Application</span>
+                <span class="spec-val">Sports & Packaging</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%2045mm%20Plastic%20Core." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                <span>WhatsApp Quote</span>
+              </a>
+              <a href="contacts.html" class="btn btn-outline">RFQ</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: 45mm Core + Jalli (Standard) -->
+        <div class="modern-product-card" data-category="assemblies">
+          <span class="card-badge">Top Seller</span>
+          <div class="card-img-box">
+            <img src="assets/images/products/3.png" alt="45mm Core + Jalli Assembly">
+          </div>
+          <div class="card-body">
+            <div class="card-category">Core + Jalli Assemblies</div>
+            <h3 class="card-title">45mm Core + Jalli</h3>
+            <p class="card-desc">Fully integrated 45mm core with interlocking lattice jalli grid. Specifically engineered for shuttlecock packaging cylinders, offering superior impact protection.</p>
+            <div class="card-specs-list">
+              <div class="spec-item">
+                <span class="spec-label">Diameter</span>
+                <span class="spec-val">Ø 45.0 mm</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Grid Type</span>
+                <span class="spec-val">Lattice Mesh</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Locking</span>
+                <span class="spec-val">Interlock Fit</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Supply</span>
+                <span class="spec-val">Carton Packs</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%2045mm%20Core%20+%20Jalli." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                <span>WhatsApp Quote</span>
+              </a>
+              <a href="contacts.html" class="btn btn-outline">RFQ</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: 6mm Plastic Core -->
+        <div class="modern-product-card" data-category="cores">
+          <span class="card-badge">Precision Slim</span>
+          <div class="card-img-box">
+            <img src="assets/images/products/2.png" alt="6mm Plastic Core">
+          </div>
+          <div class="card-body">
+            <div class="card-category">Plastic Cores</div>
+            <h3 class="card-title">6mm Plastic Core</h3>
+            <p class="card-desc">Compact 6mm diameter moulded core with exact internal bore concentricity. Ideal for fine ribbon spooling, tape cores, and sports accessories.</p>
+            <div class="card-specs-list">
+              <div class="spec-item">
+                <span class="spec-label">Diameter</span>
+                <span class="spec-val">Ø 6.0 mm</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Material</span>
+                <span class="spec-val">Tough Polymer</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Concentricity</span>
+                <span class="spec-val">High Precision</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Supply</span>
+                <span class="spec-val">Wholesale Ready</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%206mm%20Plastic%20Core." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                <span>WhatsApp Quote</span>
+              </a>
+              <a href="contacts.html" class="btn btn-outline">RFQ</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: 45mm Core + Jalli (Base View) -->
+        <div class="modern-product-card" data-category="assemblies">
+          <span class="card-badge">Base Interlock</span>
+          <div class="card-img-box">
+            <img src="assets/images/products/5.png" alt="45mm Core + Jalli Base View">
+          </div>
+          <div class="card-body">
+            <div class="card-category">Core + Jalli Assemblies</div>
+            <h3 class="card-title">45mm Core + Jalli (Base View)</h3>
+            <p class="card-desc">Underside angle displaying structural rim ribs and positive-lock mesh integration. Ensures uniform pressure distribution and anti-slip cylinder fit.</p>
+            <div class="card-specs-list">
+              <div class="spec-item">
+                <span class="spec-label">Locking Mechanism</span>
+                <span class="spec-val">Positive Rim</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Material</span>
+                <span class="spec-val">Virgin Polymers</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Shock Absorption</span>
+                <span class="spec-val">High Impact</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Application</span>
+                <span class="spec-val">Sports Equipment</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%2045mm%20Core%20+%20Jalli%20assembly." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                <span>WhatsApp Quote</span>
+              </a>
+              <a href="contacts.html" class="btn btn-outline">RFQ</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: 6mm Core (Profile View) -->
+        <div class="modern-product-card" data-category="cores">
+          <span class="card-badge">Profile View</span>
+          <div class="card-img-box">
+            <img src="assets/images/products/4.png" alt="6mm Core Side Profile">
+          </div>
+          <div class="card-body">
+            <div class="card-category">Plastic Cores</div>
+            <h3 class="card-title">6mm Core (Side Profile)</h3>
+            <p class="card-desc">Lateral profile perspective demonstrating smooth wall calibration, zero parting-line burrs, and tight axial straightness along the core length.</p>
+            <div class="card-specs-list">
+              <div class="spec-item">
+                <span class="spec-label">Diameter</span>
+                <span class="spec-val">Ø 6.0 mm</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Surface</span>
+                <span class="spec-val">Clean / Burr-free</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Wall Gauge</span>
+                <span class="spec-val">Uniform 1.2 mm</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Usage</span>
+                <span class="spec-val">Mechanical / Spool</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%206mm%20Cores." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                <span>WhatsApp Quote</span>
+              </a>
+              <a href="contacts.html" class="btn btn-outline">RFQ</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: 65mm Core + Jalli (Heavy Duty) -->
+        <div class="modern-product-card" data-category="assemblies">
+          <span class="card-badge">Large Core</span>
+          <div class="card-img-box">
+            <img src="assets/images/products/6.png" alt="65mm Core with Jalli">
+          </div>
+          <div class="card-body">
+            <div class="card-category">Core + Jalli Assemblies</div>
+            <h3 class="card-title">65mm Core + Jalli</h3>
+            <p class="card-desc">Heavy-duty 65mm diameter core engineered for larger cylinders, heavy-gauge sports goods packaging, and industrial winding containers.</p>
+            <div class="card-specs-list">
+              <div class="spec-item">
+                <span class="spec-label">Diameter</span>
+                <span class="spec-val">Ø 65.0 mm</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Gauge</span>
+                <span class="spec-val">Reinforced Wall</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Material</span>
+                <span class="spec-val">Impact Grade PP</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Strength</span>
+                <span class="spec-val">High Load Tested</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%2065mm%20Core%20+%20Jalli." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                <span>WhatsApp Quote</span>
+              </a>
+              <a href="contacts.html" class="btn btn-outline">RFQ</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7: Plastic Jalli Component -->
+        <div class="modern-product-card" data-category="components">
+          <span class="card-badge">Component</span>
+          <div class="card-img-box">
+            <img src="assets/images/products/7.png" alt="Plastic Jalli Component">
+          </div>
+          <div class="card-body">
+            <div class="card-category">Components & Jalli</div>
+            <h3 class="card-title">Plastic Jalli (Mesh Component)</h3>
+            <p class="card-desc">High-precision circular lattice mesh component. Engineered with optimal open-area percentage for structural cushioning, ventilation, and protective caps.</p>
+            <div class="card-specs-list">
+              <div class="spec-item">
+                <span class="spec-label">Mesh Type</span>
+                <span class="spec-val">Lattice Radial</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Material</span>
+                <span class="spec-val">Tough Polymer</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Compatibility</span>
+                <span class="spec-val">45mm / 65mm</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Colors</span>
+                <span class="spec-val">Standard / Custom</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20Plastic%20Jalli%20components." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                <span>WhatsApp Quote</span>
+              </a>
+              <a href="contacts.html" class="btn btn-outline">RFQ</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8: Custom Tooling & Moulding -->
+        <div class="modern-product-card" data-category="custom">
+          <span class="card-badge">Custom Engineering</span>
+          <div class="card-img-box">
+            <img src="assets/images/backgrounds/Injection-Moulding.jpg" alt="Custom Plastic Injection Tooling">
+          </div>
+          <div class="card-body">
+            <div class="card-category">Custom Tooling</div>
+            <h3 class="card-title">Custom Tooling & Die Solutions</h3>
+            <p class="card-desc">Need a non-standard plastic component, sports fitting, or custom enclosure? We engineer precision moulds and run continuous high-volume production.</p>
+            <div class="card-specs-list">
+              <div class="spec-item">
+                <span class="spec-label">Input</span>
+                <span class="spec-val">CAD / Physical Part</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Tooling</span>
+                <span class="spec-val">Hardened Steel Die</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Production</span>
+                <span class="spec-val">High-Volume Runs</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Sampling</span>
+                <span class="spec-val">Pre-production OK</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20a%20custom%20plastic%20moulding%20requirement." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                <span>Discuss Design</span>
+              </a>
+              <a href="contacts.html" class="btn btn-outline">RFQ</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Comparison Table -->
+  <section class="section section-subtle">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Technical Reference</span>
+        <h2>Standard Product Comparison Table</h2>
+        <p>Dimensional specifications and material classifications for high-volume procurement.</p>
+      </div>
+
+      <div class="table-responsive-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Dimensions</th>
+              <th>Material Grade</th>
+              <th>Tolerance</th>
+              <th>Primary Use</th>
+              <th>Inquiry</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight:700;">45mm Plastic Core</td>
+              <td style="font-family:var(--font-mono);">Ø 45.0 mm</td>
+              <td>Virgin Polypropylene</td>
+              <td style="font-family:var(--font-mono);">± 0.05 mm</td>
+              <td>Shuttlecock tubes, industrial cores</td>
+              <td><a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%2045mm%20Plastic%20Core." class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer">WhatsApp</a></td>
+            </tr>
+            <tr>
+              <td style="font-weight:700;">45mm Core + Jalli</td>
+              <td style="font-family:var(--font-mono);">Ø 45.0 mm + Mesh</td>
+              <td>High-Impact PP</td>
+              <td style="font-family:var(--font-mono);">± 0.05 mm</td>
+              <td>Protective cylinder packaging</td>
+              <td><a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%2045mm%20Core%20+%20Jalli." class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer">WhatsApp</a></td>
+            </tr>
+            <tr>
+              <td style="font-weight:700;">6mm Plastic Core</td>
+              <td style="font-family:var(--font-mono);">Ø 6.0 mm</td>
+              <td>Engineering Polymers</td>
+              <td style="font-family:var(--font-mono);">± 0.03 mm</td>
+              <td>Precision winding, sports accessories</td>
+              <td><a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%206mm%20Plastic%20Core." class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer">WhatsApp</a></td>
+            </tr>
+            <tr>
+              <td style="font-weight:700;">65mm Core + Jalli</td>
+              <td style="font-family:var(--font-mono);">Ø 65.0 mm + Mesh</td>
+              <td>Heavy Gauge PP</td>
+              <td style="font-family:var(--font-mono);">± 0.08 mm</td>
+              <td>Heavy packaging, industrial cylinders</td>
+              <td><a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20the%2065mm%20Core%20+%20Jalli." class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer">WhatsApp</a></td>
+            </tr>
+            <tr>
+              <td style="font-weight:700;">Plastic Jalli (Mesh)</td>
+              <td style="font-family:var(--font-mono);">Radial Lattice</td>
+              <td>Polypropylene / PE</td>
+              <td style="font-family:var(--font-mono);">Clean Molded</td>
+              <td>Airflow grids, component filters</td>
+              <td><a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20want%20to%20inquire%20about%20Plastic%20Jalli%20components." class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer">WhatsApp</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Tooling 4-Step Process Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Custom Manufacturing</span>
+        <h2>How We Develop Custom Moulded Components</h2>
+        <p>A streamlined four-step engineering process from initial CAD or physical sample to high-volume multi-shift manufacturing.</p>
+      </div>
+
+      <div class="capabilities-grid steps-grid">
+        <div class="cap-card">
+          <div class="stat-number" style="font-size:2rem; margin-bottom:14px; color:var(--color-primary);">01</div>
+          <h4>Design Review</h4>
+          <p>You provide a physical part or 2D/3D drawing. We analyze wall thickness, draft angles, polymer selection, and shrinkage parameters.</p>
+        </div>
+
+        <div class="cap-card">
+          <div class="stat-number" style="font-size:2rem; margin-bottom:14px; color:var(--color-primary);">02</div>
+          <h4>Tooling & Die</h4>
+          <p>We coordinate hardened steel die fabrication, runner gates, and cooling channels optimized for high-volume cycles.</p>
+        </div>
+
+        <div class="cap-card">
+          <div class="stat-number" style="font-size:2rem; margin-bottom:14px; color:var(--color-primary);">03</div>
+          <h4>Trial Sampling</h4>
+          <p>Initial samples are pressed and dispatched to your facility for fitment, stress testing, and dimension sign-off before full production.</p>
+        </div>
+
+        <div class="cap-card">
+          <div class="stat-number" style="font-size:2rem; margin-bottom:14px; color:var(--color-primary);">04</div>
+          <h4>Bulk Production</h4>
+          <p>Continuous scheduled machine runs, automated batch packing, quality auditing, and scheduled pan-India freight dispatches.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-sm section-dark" style="border-top:1px solid var(--color-slate-800);">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:24px;">
+      <div>
+        <h3 style="color:var(--color-white); margin-bottom:6px;">Need Sample Parts or Volume Quotations?</h3>
+        <p style="color:var(--color-slate-300); margin:0;">Our technical team in Meerut provides samples, custom dimensions, and competitive contract pricing.</p>
+      </div>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20would%20like%20to%20request%20samples%20and%20pricing." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+          <span>Chat on WhatsApp</span>
+        </a>
+        <a href="contacts.html" class="btn btn-primary">Submit RFQ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/images/logo/logo-light.svg" alt="Mittal Plastic Works Logo" class="footer-logo">
+          <p class="footer-text">Mittal Plastic Works is an established plastic injection moulding manufacturer based in Meerut, UP. Specializing in high-tolerance plastic cores, jalli assemblies, and custom engineered plastic solutions for over 20 years.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Our Enterprise</a>
+            <a href="products.html">Product Catalog</a>
+            <a href="contacts.html">Contact & Location</a>
+            <a href="contacts.html#rfq">Request a Quote</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Core Products</h5>
+          <div class="footer-links">
+            <a href="products.html">45mm Plastic Core</a>
+            <a href="products.html">6mm Plastic Core</a>
+            <a href="products.html">45mm Core + Jalli</a>
+            <a href="products.html">65mm Core + Jalli</a>
+            <a href="products.html">Plastic Jalli (Mesh)</a>
+            <a href="products.html">Custom Injection Moulding</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Factory Contact</h5>
+          <p class="footer-text">
+            509, Baghpat Rd, Sabun Godam, Chanderlok, Meerut, Uttar Pradesh 250002<br><br>
+            Phone: <a href="tel:+919837075324" style="color:var(--color-white); font-weight:600;">+91-9837075324</a><br>
+            Email: <a href="mailto:mplasticw@gmail.com" style="color:var(--color-white); font-weight:600;">mplasticw@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year">2026</span> Mittal Plastic Works. All Rights Reserved.</div>
+        <div>Precision Plastic Injection Moulding • Meerut, Uttar Pradesh, India</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20would%20like%20to%20inquire%20about%20your%20products." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat directly on WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <!-- Mobile Bottom Action Bar -->
+  <div class="mobile-bottom-bar">
+    <a href="tel:+919837075324" class="mobile-bottom-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20an%20inquiry%20about%20your%20products." target="_blank" rel="noopener noreferrer" class="mobile-bottom-btn highlight">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="contacts.html" class="mobile-bottom-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <span>Quote</span>
+    </a>
   </div>
 
-  <script src="assets/js/jquery-3.3.1.min.js"></script>
-  <script src="assets/js/plugins.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script>
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-  </script>
+  <script src="assets/js/modern.js"></script>
 </body>
 
 </html>

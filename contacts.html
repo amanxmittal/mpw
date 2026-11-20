@@ -5,298 +5,301 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="Contact Mittal Plastic Works in Meerut for bulk plastic cores, jallis, and custom injection moulding inquiries. Call +91-9837075324 or email mplasticw@gmail.com.">
+  <meta name="description" content="Contact Mittal Plastic Works in Meerut for bulk plastic cores, jalli assemblies, and custom injection moulding quotes. Call +91-9837075324 or submit your RFQ online.">
   <link href="assets/images/favicon/mpwfavicon.png" rel="icon">
-  <title>Contact Us | Mittal Plastic Works - Meerut, Uttar Pradesh</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700%7cRoboto:400,500,700&amp;display=swap">
-  <link rel="stylesheet" href="assets/css/libraries.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Contact Us & Request a Quote | Mittal Plastic Works</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Inline Theme Script to Prevent Theme Flash (FOUC) -->
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('mpw-theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (saved === 'dark' || (!saved && prefersDark)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Modern Design System Stylesheet -->
+  <link rel="stylesheet" href="assets/css/modern.css" />
 </head>
 
 <body>
-  <div class="wrapper">
-    <!-- =========================
-        Header 
-    =========================== -->
-    <header class="header header-transparent">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo/logo-light.svg" class="logo-light" alt="Mittal Plastic Works">
-            <img src="assets/images/logo/logo-dark.svg" class="logo-dark" alt="Mittal Plastic Works">
-          </a>
-          <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-            <span class="menu-lines"><span></span></span>
-          </button>
-          <div class="collapse navbar-collapse" id="mainNavigation">
-            <ul class="navbar-nav mr-auto ml-auto">
-              <li class="nav__item">
-                <a href="index.html" class="nav__item-link">Home</a>
-              </li>
-              <li class="nav__item">
-                <a href="about-us.html" class="nav__item-link">About Us</a>
-              </li>
-              <li class="nav__item">
-                <a href="products.html" class="nav__item-link">Our Products</a>
-              </li>
-              <li class="nav__item">
-                <a href="contacts.html" class="nav__item-link active">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="navbar-actions">
-            <ul class="navbar__actions-list list-unstyled mb-0 d-flex align-items-center">
-              <li><a href="contacts.html" class="action__btn btn btn__white action__btn-contact">Get a Quote</a></li>
-              <li><a href="#" class="action__btn action__btn-humburgerMenu" aria-label="Menu"><i class="icon-menu"></i></a></li>
-            </ul>
-          </div>
-        </div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Mittal Plastic Works Home">
+        <img src="assets/images/logo/logo-dark.svg" alt="Mittal Plastic Works Logo" class="logo-for-light">
+        <img src="assets/images/logo/logo-light.svg" alt="Mittal Plastic Works Logo" class="logo-for-dark">
+        <span class="brand-badge">Meerut, UP</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about-us.html" class="nav-link">About Us</a>
+        <a href="products.html" class="nav-link">Our Products</a>
+        <a href="contacts.html" class="nav-link active">Contact & RFQ</a>
       </nav>
-    </header>
 
-    <!-- ========================
-       Page Title 
-    =========================== -->
-    <section class="page-title page-title-layout2 text-center bg-overlay">
-      <div class="bg-img"><img src="assets/images/backgrounds/9.jpg" alt="Contact Mittal Plastic Works"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-            <h1 class="pagetitle__heading">Contact Us</h1>
-            <p class="pagetitle__desc">Get in touch directly with our manufacturing facility in Meerut for bulk quotes, sample components, or custom mould requirements.</p>
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb justify-content-center">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
-              </ol>
-            </nav>
-          </div>
-        </div>
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="tel:+919837075324" class="btn btn-outline btn-sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91-9837075324</span>
+        </a>
+        <a href="#rfq" class="btn btn-primary btn-sm">RFQ Form</a>
+
+        <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
       </div>
-    </section>
+    </div>
+  </header>
 
-    <!-- ========================= 
-      Contact Boxes
-    =========================  -->
-    <section class="contact-layout1 pb-60 pt-80">
-      <div class="container">
-        <div class="row">
-          <!-- Box #1 -->
-          <div class="col-sm-12 col-md-4 col-lg-4 mb-30">
-            <div class="contact-box d-flex align-items-center h-100">
-              <div class="contact-box__icon">
-                <img src="assets/images/icons/globe.png" alt="Location Icon">
-              </div>
-              <div class="contact-box__content">
-                <h4 class="contact-box__title">Factory & Office</h4>
-                <ul class="contact-box__list list-unstyled mb-0">
-                  <li>509, Baghpat Rd, Sabun Godam, Chanderlok, Meerut, Uttar Pradesh 250002</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Box #2 -->
-          <div class="col-sm-12 col-md-4 col-lg-4 mb-30">
-            <div class="contact-box d-flex align-items-center h-100">
-              <div class="contact-box__icon">
-                <img src="assets/images/icons/envelope.png" alt="Email Icon">
-              </div>
-              <div class="contact-box__content">
-                <h4 class="contact-box__title">Email Us</h4>
-                <ul class="contact-box__list list-unstyled mb-0">
-                  <li><b>General:</b> <a href="mailto:mplasticw@gmail.com">mplasticw@gmail.com</a></li>
-                  <li><b>Response:</b> Within 24 Hours</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Box #3 -->
-          <div class="col-sm-12 col-md-4 col-lg-4 mb-30">
-            <div class="contact-box d-flex align-items-center h-100">
-              <div class="contact-box__icon">
-                <img src="assets/images/icons/support.png" alt="Phone Icon">
-              </div>
-              <div class="contact-box__content">
-                <h4 class="contact-box__title">Call & WhatsApp</h4>
-                <ul class="contact-box__list list-unstyled mb-0">
-                  <li><b>Phone:</b> <a href="tel:+919837075324">+91-9837075324</a></li>
-                  <li><b>WhatsApp:</b> <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer">+91-9837075324</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- Contact Hero -->
+  <section class="section-sm section-dark" style="padding-top: calc(var(--header-height) + 50px); border-bottom: 1px solid var(--color-slate-800);">
+    <div class="container text-center">
+      <span class="eyebrow" style="color:var(--color-accent);">Direct Factory Communication</span>
+      <h1>Contact Our Team & Request a Quote</h1>
+      <p style="max-width: 680px; margin: 16px auto 0 auto; color: var(--color-slate-300);">Connect directly with our manufacturing unit in Meerut for bulk quotes, trial component samples, or custom mould requirements.</p>
+    </div>
+  </section>
 
-    <!-- ========================= 
-        Contact Form & Google Map
-    =========================  -->
-    <section class="contact-layout2 py-0">
-      <div class="contact-panel">
-        <h5 class="contact-panel__title">Send an Inquiry</h5>
-        <p class="contact-panel__desc">Fill out your component requirements below and our team will get back to you with pricing, lead times, and specifications.</p>
+  <!-- Contact Layout & RFQ Form -->
+  <section class="section" id="rfq">
+    <div class="container">
+      <div class="contact-layout-grid">
         
-        <!-- Netlify Form Success Alert -->
-        <div id="formSuccessAlert" class="form-notification is-success" style="display:none;">
-          <i class="fa fa-check-circle mr-2"></i> Thank you! Your inquiry has been submitted successfully. We will get in touch shortly.
+        <!-- Left: Contact Details -->
+        <div class="contact-info-panel">
+          <span class="eyebrow">Plant & Office</span>
+          <h2>We're Here to Support Your Supply Chain</h2>
+          <p>Whether you're exploring regular bulk supply contracts or developing a new custom plastic component, our experienced team provides quick technical clarity.</p>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-card-content">
+              <h5>Manufacturing Plant & Office</h5>
+              <p>509, Baghpat Rd, Sabun Godam, Chanderlok, Meerut, Uttar Pradesh 250002</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="contact-card-content">
+              <h5>Direct Phone & WhatsApp</h5>
+              <p><a href="tel:+919837075324"><b>+91-9837075324</b></a></p>
+              <p style="font-size:0.85rem; color:var(--color-slate-400); margin-top:2px;">Call or WhatsApp anytime during working hours</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-card-content">
+              <h5>Email Inquiries</h5>
+              <p><a href="mailto:mplasticw@gmail.com"><b>mplasticw@gmail.com</b></a></p>
+              <p style="font-size:0.85rem; color:var(--color-slate-400); margin-top:2px;">We respond to all written quotes within 24 hours</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="contact-card-content">
+              <h5>Plant Operational Hours</h5>
+              <p>Monday – Saturday: 9:00 AM – 7:30 PM<br>Sunday: Closed for Machine Maintenance</p>
+            </div>
+          </div>
         </div>
 
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="contacts.html?success=true">
-          <input type="hidden" name="form-name" value="contact" />
-          <p class="d-none" style="display:none;">
-            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-          </p>
-          <div class="row">
-            <div class="col-sm-6 col-md-6 col-lg-6">
+        <!-- Right: Netlify RFQ Form -->
+        <div class="rfq-form-card">
+          <h3 style="margin-bottom:8px;">Request a Quotation / Sample</h3>
+          <p style="margin-bottom:24px; font-size:0.95rem;">Fill out the details below. Our technical sales team will review and reply with unit prices and dispatch timelines.</p>
+
+          <!-- Netlify Success Notification -->
+          <div id="formSuccessAlert" style="display:none; background:#ecfdf5; border:1px solid #a7f3d0; color:#065f46; padding:16px 20px; border-radius:10px; margin-bottom:24px; font-weight:600; align-items:center; gap:10px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Thank you! Your quotation request has been received. Our team will contact you shortly.</span>
+          </div>
+
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="contacts.html?success=true#rfq">
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none;"><label>Bot field: <input name="bot-field" /></label></p>
+
+            <div class="form-grid">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" placeholder="Your Name *" required>
+                <label class="form-label" for="contact-name">Your Full Name *</label>
+                <input type="text" id="contact-name" name="name" class="form-control" placeholder="e.g. Amit Sharma" required>
               </div>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-6">
+
               <div class="form-group">
-                <input type="tel" name="phone" class="form-control" placeholder="Phone Number / WhatsApp *" required>
+                <label class="form-label" for="contact-phone">Phone / WhatsApp Number *</label>
+                <input type="tel" id="contact-phone" name="phone" class="form-control" placeholder="e.g. +91 98370 00000" required>
               </div>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-6">
+
               <div class="form-group">
-                <input type="email" name="email" class="form-control" placeholder="Email Address *" required>
+                <label class="form-label" for="contact-email">Email Address *</label>
+                <input type="email" id="contact-email" name="email" class="form-control" placeholder="e.g. amit@company.com" required>
               </div>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-6">
+
               <div class="form-group">
-                <select name="product_interest" class="form-control">
-                  <option value="" disabled selected>Interested In (Product / Service)</option>
+                <label class="form-label" for="contact-company">Company / Business Name</label>
+                <input type="text" id="contact-company" name="company" class="form-control" placeholder="e.g. Sharma Sports Goods">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-product">Product Requirement *</label>
+                <select id="contact-product" name="product_interest" class="form-control" required>
+                  <option value="" disabled selected>Select Product Category</option>
                   <option value="45mm Core">45mm Plastic Core</option>
                   <option value="6mm Core">6mm Plastic Core</option>
                   <option value="45mm Core + Jalli">45mm Core + Jalli Assembly</option>
                   <option value="65mm Core + Jalli">65mm Core + Jalli Assembly</option>
-                  <option value="Plastic Jalli">Plastic Jalli Component</option>
-                  <option value="Custom Injection Moulding">Custom Injection Moulding Requirement</option>
-                  <option value="General Inquiry">General / Other Wholesale Inquiry</option>
+                  <option value="Plastic Jalli">Plastic Jalli (Mesh Component)</option>
+                  <option value="Custom Injection Tooling">Custom Mould / Tooling Development</option>
+                  <option value="Sample Request">Trial Sample Component Request</option>
+                  <option value="General Wholesale Inquiry">Other Bulk Wholesale Inquiry</option>
                 </select>
               </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <div class="form-group mb-30">
-                <textarea name="details" class="form-control" rows="4" placeholder="Requirement Details (Quantities, Dimensions, Timeline):" required></textarea>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-12 d-flex flex-wrap align-items-center">
-              <button type="submit" class="btn btn__primary btn__icon mr-3 mb-2">
-                <span>Submit Inquiry</span>
-                <i class="fa fa-long-arrow-right"></i>
-              </button>
-              <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="btn btn__white mb-2">
-                <i class="fa fa-whatsapp mr-1 text-success"></i> Chat on WhatsApp
-              </a>
-            </div>
-          </div>
-        </form>
-      </div>
 
-      <!-- Google Maps Embed for Mittal Plastic Works, Meerut -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13962.49880981457!2d77.6744294!3d28.968854!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x227f0ff7b6554192!2sMittal%20Plastic%20Works!5e0!3m2!1sen!2sin!4v1607141747772!5m2!1sen!2sin" width="100%" height="480" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Mittal Plastic Works Location"></iframe>
-    </section>
+              <div class="form-group">
+                <label class="form-label" for="contact-volume">Estimated Volume / Target Quantity</label>
+                <input type="text" id="contact-volume" name="volume" class="form-control" placeholder="e.g. 10,000 pcs / month">
+              </div>
 
-    <!-- ========================
-      Footer
-    ========================== -->
-    <footer class="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 footer__widget footer__widget-about">
-              <h6 class="footer__widget-title">About Mittal Plastic Works</h6>
-              <div class="footer__widget-content d-flex">
-                <div class="widget__about-logo">
-                  <img src="assets/images/logo/mpw-logo-light-mini.png" alt="MPW Logo">
-                </div>
-                <div class="widget__about-text">
-                  <p>A trusted plastic injection moulding manufacturer based in Meerut, Uttar Pradesh. Specializing in high-tolerance plastic cores, jallis, and custom engineered components for sports goods, packaging, and industrial applications.</p>
-                </div>
+              <div class="form-group full-width">
+                <label class="form-label" for="contact-details">Requirement Specifications & Delivery Location *</label>
+                <textarea id="contact-details" name="details" class="form-control" placeholder="Please describe required dimensions, color, destination city for logistics, or sample shipping address:" required></textarea>
+              </div>
+
+              <div class="form-group full-width" style="display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-top:10px;">
+                <button type="submit" class="btn btn-primary btn-lg">Submit Request for Quote</button>
+                <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20an%20inquiry%20regarding%20your%20products." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+                  <span>Chat on WhatsApp</span>
+                </a>
               </div>
             </div>
-            <div class="col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3 footer__widget footer__widget-nav">
-              <h6 class="footer__widget-title">Quick Links</h6>
-              <div class="footer__widget-content">
-                <nav>
-                  <ul class="list-unstyled">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="products.html">Our Products</a></li>
-                    <li><a href="contacts.html">Contact Us</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 footer__widget">
-              <h6 class="footer__widget-title">Contact & Facility</h6>
-              <div class="footer__widget-content">
-                <p class="mb-10"><i class="fa fa-map-marker text-success mr-2"></i> 509, Baghpat Rd, Sabun Godam, Chanderlok, Meerut, Uttar Pradesh 250002</p>
-                <p class="mb-10"><i class="fa fa-envelope text-success mr-2"></i> <a href="mailto:mplasticw@gmail.com" class="color-white">mplasticw@gmail.com</a></p>
-                <p class="mb-10"><i class="fa fa-phone text-success mr-2"></i> <a href="tel:+919837075324" class="color-white">+91-9837075324</a></p>
-                <p class="mb-0"><i class="fa fa-whatsapp text-success mr-2"></i> <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="color-white">WhatsApp Inquiry</a></p>
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-              <div class="footer__copyright">
-                <p class="fz-13 mb-0">&copy; <span id="currentYear">2026</span> Mittal Plastic Works. All Rights Reserved.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20would%20like%20to%20inquire%20about%20your%20products." 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       aria-label="Chat on WhatsApp">
-      <i class="fa fa-whatsapp"></i>
-      <span>Chat on WhatsApp</span>
-    </a>
-
-    <button id="scrollTopBtn" aria-label="Scroll to top"><i class="fa fa-long-arrow-up"></i></button>
-
-    <div class="hamburger-menu">
-      <i class="hamburger__menu-close">&times;</i>
-      <div class="hamburger__menu-content">
-        <h3 class="custome-menus"><a class="hamburger__menu-email" href="index.html">Home</a></h3>
-        <h3 class="custome-menus"><a class="hamburger__menu-email" href="about-us.html">About Us</a></h3>
-        <h3 class="custome-menus"><a class="hamburger__menu-email" href="products.html">Our Products</a></h3>
-        <h3 class="custome-menus"><a class="hamburger__menu-email" href="contacts.html">Contact Us</a></h3>
-        
-        <p class="color-white font-weight-bold custom-margin-top">Contact Direct</p>
-        <p class="color-white fz-14 mb-10"><i class="fa fa-phone mr-2"></i> +91-9837075324</p>
-        <p class="color-white fz-14 mb-20"><i class="fa fa-envelope mr-2"></i> mplasticw@gmail.com</p>
-        <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="btn btn__white btn__bordered btn__sm">
-          <i class="fa fa-whatsapp mr-2 text-success"></i> Chat on WhatsApp
-        </a>
+      <!-- Google Maps Embed Section -->
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13962.49880981457!2d77.6744294!3d28.968854!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x227f0ff7b6554192!2sMittal%20Plastic%20Works!5e0!3m2!1sen!2sin!4v1607141747772!5m2!1sen!2sin" width="100%" height="440" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Mittal Plastic Works Meerut Location Map"></iframe>
       </div>
     </div>
+  </section>
 
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/images/logo/logo-light.svg" alt="Mittal Plastic Works Logo" class="footer-logo">
+          <p class="footer-text">Mittal Plastic Works is an established plastic injection moulding manufacturer based in Meerut, UP. Specializing in high-tolerance plastic cores, jalli assemblies, and custom engineered plastic solutions for over 20 years.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Our Enterprise</a>
+            <a href="products.html">Product Catalog</a>
+            <a href="contacts.html">Contact & Location</a>
+            <a href="contacts.html#rfq">Request a Quote</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Core Products</h5>
+          <div class="footer-links">
+            <a href="products.html">45mm Plastic Core</a>
+            <a href="products.html">6mm Plastic Core</a>
+            <a href="products.html">45mm Core + Jalli</a>
+            <a href="products.html">65mm Core + Jalli</a>
+            <a href="products.html">Plastic Jalli (Mesh)</a>
+            <a href="products.html">Custom Injection Moulding</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Factory Contact</h5>
+          <p class="footer-text">
+            509, Baghpat Rd, Sabun Godam, Chanderlok, Meerut, Uttar Pradesh 250002<br><br>
+            Phone: <a href="tel:+919837075324" style="color:var(--color-white); font-weight:600;">+91-9837075324</a><br>
+            Email: <a href="mailto:mplasticw@gmail.com" style="color:var(--color-white); font-weight:600;">mplasticw@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; <span class="current-year">2026</span> Mittal Plastic Works. All Rights Reserved.</div>
+        <div>Precision Plastic Injection Moulding • Meerut, Uttar Pradesh, India</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20would%20like%20to%20inquire%20about%20your%20products." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Chat directly on WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <!-- Mobile Bottom Action Bar -->
+  <div class="mobile-bottom-bar">
+    <a href="tel:+919837075324" class="mobile-bottom-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/919837075324?text=Hi%20Mittal%20Plastic%20Works,%20I%20have%20an%20inquiry." target="_blank" rel="noopener noreferrer" class="mobile-bottom-btn highlight">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.32C9.37 7.32 9.12 7.38 8.9 7.62C8.68 7.86 8.07 8.43 8.07 9.59C8.07 10.75 8.92 11.87 9.04 12.03C9.16 12.19 10.7 14.56 13.06 15.58C13.62 15.82 14.06 15.97 14.4 16.08C14.96 16.26 15.48 16.23 15.88 16.17C16.33 16.1 17.26 15.6 17.45 15.06C17.65 14.53 17.65 14.07 17.59 13.98C17.53 13.88 17.37 13.83 17.13 13.71C16.89 13.59 15.7 13 15.48 12.92C15.26 12.84 15.1 12.8 14.94 13.04C14.78 13.28 14.33 13.83 14.19 13.98C14.05 14.14 13.92 14.16 13.68 14.04C13.44 13.92 12.67 13.67 11.75 12.85C11.03 12.21 10.54 11.42 10.4 11.18C10.26 10.94 10.38 10.81 10.51 10.69C10.61 10.59 10.74 10.42 10.86 10.28C10.98 10.14 11.02 10.04 11.1 9.88C11.18 9.72 11.14 9.58 11.08 9.46C11.02 9.34 10.56 8.21 10.37 7.74C10.18 7.29 9.99 7.35 9.84 7.34C9.7 7.33 9.53 7.32 9.53 7.32Z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#rfq" class="mobile-bottom-btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <span>Quote</span>
+    </a>
   </div>
 
-  <script src="assets/js/jquery-3.3.1.min.js"></script>
-  <script src="assets/js/plugins.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script>
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-    if (window.location.search.includes('success=true')) {
-      var alertBox = document.getElementById('formSuccessAlert');
-      if (alertBox) alertBox.style.display = 'block';
-    }
-  </script>
+  <script src="assets/js/modern.js"></script>
 </body>
 
 </html>
