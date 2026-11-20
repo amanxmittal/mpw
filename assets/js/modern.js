@@ -104,7 +104,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 6. Netlify Form Success Notification
+  // 6. Netlify Forms - Seamless AJAX Submission & Instant Confirmation
+  const netlifyForms = document.querySelectorAll('form[data-netlify="true"]');
+  netlifyForms.forEach(form => {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalHtml = submitBtn ? submitBtn.innerHTML : 'Submit';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+          <svg style="animation: spin 1s linear infinite; display: inline-block; vertical-align: middle; margin-right: 6px;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
+            <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"></path>
+          </svg>
+          Submitting...
+        `;
+      }
+
+      const formData = new FormData(form);
+      const params = new URLSearchParams(formData).toString();
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params
+      })
+      .then(response => {
+        if (response.ok) {
+          form.reset();
+          const alert = document.getElementById('formSuccessAlert');
+          if (alert) {
+            alert.style.display = 'flex';
+            alert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } else {
+          // If fetch not ok, fallback to normal submission
+          form.submit();
+        }
+      })
+      .catch(() => {
+        // Network fallback
+        form.submit();
+      })
+      .finally(() => {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalHtml;
+        }
+      });
+    });
+  });
+
+  // Check URL query parameter fallback (e.g. ?success=true)
   if (window.location.search.includes('success=true')) {
     const successAlert = document.getElementById('formSuccessAlert');
     if (successAlert) {

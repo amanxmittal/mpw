@@ -16,7 +16,8 @@ Official website for **Mittal Plastic Works** — a precision plastic injection 
 - **Performance:** Sub-second load times, zero legacy dependencies (no jQuery, no external icon fonts, no heavy build pipelines).
 - **Typography:** Google Fonts (*Plus Jakarta Sans* & *JetBrains Mono* for technical specifications).
 - **Icons:** Inline SVG icons for crisp 60fps rendering without render-blocking icon font downloads.
-- **Hosting & Lead Capture:** Statically hosted on **Netlify**. B2B quotation inquiries are captured natively using Netlify Forms (`data-netlify="true"`) with honeypot spam filtering.
+- **Hosting & Lead Capture:** Statically hosted on **Netlify**. B2B quotation inquiries are captured natively using Netlify Forms (`data-netlify="true"`) with honeypot spam filtering and seamless AJAX submission with loading state.
+- **Search & AI SEO (GEO):** Comprehensive Schema.org JSON-LD structured data (`ManufacturingBusiness`, `Product`, `FAQPage`, `BreadcrumbList`), complete Open Graph & Twitter Cards, geotagging for Meerut/UP industrial clusters, `sitemap.xml`, permissive `robots.txt`, and standard `llms.txt` for AI search engines (Perplexity, ChatGPT, Claude).
 - **Instant B2B Inquiry:** 1-tap WhatsApp buttons configured across all product cards and mobile quick-action bar (`+91 9837075324`).
 
 ## Pages
