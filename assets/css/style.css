@@ -5923,3 +5923,145 @@ textarea.form-control {
 .custom-margin-top {
     margin-top: 80px;
 }
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #ffffff !important;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.45);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.whatsapp-float i {
+    font-size: 22px;
+}
+.whatsapp-float:hover {
+    background-color: #20ba59;
+    color: #ffffff !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 22px rgba(37, 211, 102, 0.65);
+}
+@media (max-width: 767px) {
+    .whatsapp-float span {
+        display: none;
+    }
+    .whatsapp-float {
+        width: 52px;
+        height: 52px;
+        padding: 0;
+        justify-content: center;
+        border-radius: 50%;
+        bottom: 20px;
+        right: 20px;
+    }
+    .whatsapp-float i {
+        font-size: 26px;
+    }
+}
+
+/* Product Card Styling */
+.product-card {
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #ebebeb;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
+    text-align: left;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    border-color: #44D500;
+}
+.product-card__img {
+    position: relative;
+    background: #fbfbfb;
+    padding: 25px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+}
+.product-card__img img {
+    max-height: 200px;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+.product-card:hover .product-card__img img {
+    transform: scale(1.06);
+}
+.product-card__content {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.product-card__category {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #27ae60;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+}
+.product-card__title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1b1a1a;
+}
+.product-card__desc {
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+.product-card__btn-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.product-card__btn-group .btn {
+    flex: 1;
+    font-size: 13px;
+    padding: 0 15px;
+    height: 40px;
+    line-height: 38px;
+    white-space: nowrap;
+}
+
+/* Alert Notification for Forms */
+.form-notification {
+    display: none;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.form-notification.is-success {
+    display: block;
+    background-color: #e8f8f0;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
